@@ -1,0 +1,74 @@
+<ion-view view-title="{{contact[4]}}">
+    <!-- <ion-nav-buttons side="left">
+        <button ui-sref="tab-chats" class="button button-positive icon ion-chevron-left"></button>
+    </ion-nav-buttons> -->
+
+    <ion-content class="padding">
+        <div class="list card " style="height:100%">
+            <div class="item item-avatar">
+                <div class="col col-20" style="  margin-top: 7%;  margin-left: -32%;">
+                    <p style="    border-radius: 25px;
+                            width: 40px;
+                            height: 40px;
+                            background-color: #c3c3c3;
+                            padding: 10px 13px;"> {{contact[4][0]}}</p>
+                </div>
+                <h2 style="margin-top: -19%;">{{contact[4]}}</h2>
+                <p>{{contact[1]}}({{contact[2]}})</p>
+            </div>
+            <!--<div class="item ">
+                <div class="list">
+                    <a class="item item-icon-left" ng-if="contact[5]!='-' " href="tel:{{contact[5]}}">
+                        <i class="icon ion-iphone"></i>移动电话1:{{contact[5]}}
+                    </a>
+
+                    <a class="item item-icon-left" ng-if="contact[6]!='-' " href="tel:{{contact[6]}}">
+                        <i class="icon ion-iphone"></i>移动电话2:{{contact[6]}}
+                    </a>
+                    <a class="item item-icon-left" ng-if="contact[7]!='-' " href="tel:{{contact[7]}}">
+                        <i class="icon ion-android-call"></i>办公电话1:{{contact[7]}}
+                    </a>
+                    <a class="item item-icon-left" ng-if="contact[8]!='-'|' ' " href="tel:{{contact[8]}}">
+                        <i class="icon ion-android-call"></i>办公电话2:{{contact[8]}}
+                    </a>
+                    <a class="item item-icon-left" ng-if="contact[9]!='-'|' ' " href="tel:{{contact[9]}}">
+                        <i class="icon ion-android-call"></i>家庭电话:{{contact[9]}}
+                    </a>
+                </div>
+            </div>-->
+              <a class="item item-icon-left" ng-if="contact[5]!='-' " href="tel:{{contact[5]}}">
+                <i class="icon ion-iphone"></i>移动电话1:{{contact[5]}}
+            </a>
+
+            <a class="item item-icon-left" ng-if="contact[6]!='-' " href="tel:{{contact[6]}}">
+                <i class="icon ion-iphone"></i>移动电话2:{{contact[6]}}
+            </a>
+            <a class="item item-icon-left" ng-if="contact[7]!='-' " href="tel:{{contact[7]}}">
+                <i class="icon ion-android-call"></i>办公电话1:{{contact[7]}}
+            </a>
+            <a class="item item-icon-left" ng-if="contact[8]!='-'|' ' " href="tel:{{contact[8]}}">
+                <i class="icon ion-android-call"></i>办公电话2:{{contact[8]}}
+            </a>
+            <a class="item item-icon-left" ng-if="contact[9]!='-'|' ' " href="tel:{{contact[9]}}">
+                <i class="icon ion-android-call"></i>家庭电话:{{contact[9]}}
+            </a>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <!-- <a ng-show="!contact.phone2" class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" href="tel:{{contact.phone}}">
+                    <i class="icon ion-android-call"></i> 呼叫
+                </a> -->
+                <!--<a   class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="showmodeltel()">
+                    <i class="icon ion-android-call"></i> 呼叫
+                </a>-->
+                <!-- <a ng-if="!contact.phone2" class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" href="sms:{{contact.phone}}">
+                    <i class="icon ion-chatbox"></i> 短信
+                </a> -->
+                <a ng-if="contact[7]" class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="showmodelsms()">
+                    <i class="icon ion-chatbox"></i> 短信
+                </a>
+                <a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="share()">
+                    <i class="icon ion-share"></i> 分享
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,52 @@
+<ion-view view-title="研究生工作通讯录">
+    <style media="screen">
+        ion-item,
+        ion-item .item-content {
+            height: 60px;
+        }
+    </style>
+    <ion-content>
+        <ion-refresher pulling-text="刷新" on-refresh="doRefresh()">
+            <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+        <div class="" ng-repeat="dep in department" style="padding:0 10px">
+            <h4 class="border-top" ng-click="toggleGroup(dep)" ng-class="{active: isGroupShown(dep)}" style="padding-top: 10px;">
+                <i class="icon ion-ionic"></i> {{dep.name}}
+            </h4>
+            <ion-list>
+                <ion-item ng-repeat="user in dep.users" nav-clear class="item-icon-right" ng-show="isGroupShown(dep)" href="#/tab/chats/{{user}}/{{contact[3]}}/{{contact[4]}}">
+                    <div class="row">
+                        <div class="col col-20">
+                            <p style="    border-radius: 25px;
+                            width: 40px;
+                            height: 40px;
+                            background-color: #c3c3c3;
+                            padding: 10px 13px;"> {{user[4][0]}}</p>
+                        </div>
+                        <div class="col col-80" style="margin-top: 4px;">
+                            <h3>{{user[4]}}</h3>
+                            <p> <span>{{user[2]}}</span>&nbsp&nbsp<span>{{user[7]}}</span></p>
+                        </div>
+
+                    </div>
+
+                    <!-- <img ng-src="https://placeholdit.imgix.net/~text?txtsize=18&txt={{user[3][0]}}&w=40&h=40&txttrack=0||"> -->
+
+                    <!--<i class="icon ion-chatbubble muted"></i>-->
+                    <i class="icon ion-ios-arrow-right" style="font-size:16px;"></i>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>
+<style>
+    .list .item {
+        height: 70px
+    }
+    
+    .list .item a {
+        height: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px
+    }
+</style>
