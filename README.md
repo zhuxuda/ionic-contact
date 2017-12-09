@@ -16,7 +16,7 @@ $ npm install -g ionic
 Then run: 
 
 ```bash
-$ ionic start myProject tabs
+$ ionic run android
 ```
 
 More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
